@@ -63,9 +63,12 @@ Route::group(['prefix' => 'admin'], function () {
                 'slug'=>$slug
             ]);
         })->name('getSlug');
-
-
     });
+
+    Route::get('categories', [CategoryController::class, 'index'])->name('categories.index');
+
+
+
 
 });
 
